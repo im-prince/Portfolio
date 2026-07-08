@@ -284,6 +284,8 @@ html:not([data-theme="light"]) #iconSun{ display: none; }
   .form-row{ flex-direction: column; }
 }
 
+.form__status{ font-size: 0.85rem; min-height: 1.2em; }
+
 /* ==========================================================================
    FOOTER
    ========================================================================== */
