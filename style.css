@@ -43,6 +43,7 @@ body{
   -webkit-font-smoothing: antialiased;
   transition: background 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
+  padding-top: 72px;
   width: 100%;
 }
 @media (prefers-reduced-motion: reduce){
@@ -58,7 +59,9 @@ svg{ width: 20px; height: 20px; }
    NAV
    ========================================================================== */
 .nav{
-  position: sticky; top: 0; z-index: 50;
+  position: fixed; top: 0; z-index: 50;
+  left: 0;
+  width: 100%;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.1rem var(--pad-inline);
   background: rgba(10,10,20,0.6);
@@ -185,7 +188,7 @@ html:not([data-theme="light"]) #iconSun{ display: none; }
 /* ==========================================================================
    SECTION SHELL
    ========================================================================== */
-.section{ max-width: 1280px; margin: 0 auto; padding: clamp(3rem,7vw,4.5rem) var(--pad-inline); }
+.section{ max-width: 1280px; margin: 0 auto; padding: clamp(3rem,7vw,4.5rem) var(--pad-inline);scroll-margin-top: 72px;  }
 .eyebrow{ font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent1); margin-bottom: 0.5rem; }
 .section__title{ font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 700; margin-bottom: 2rem; }
 .section__head{ display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; }

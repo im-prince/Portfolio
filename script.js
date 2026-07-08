@@ -56,3 +56,25 @@ contactForm.addEventListener('submit', (e) => {
   const body = encodeURIComponent(`${messageInput.value}\n\n— ${nameInput.value} (${emailInput.value})`);
   window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
 });
+
+
+/* ==========================================================================
+   SCROLLSPY
+   Highlights whichever nav link matches the section currently in view,
+   instead of leaving "Home" permanently active.
+   ========================================================================== */
+const sections = document.querySelectorAll('main section[id]');
+const navAnchors = document.querySelectorAll('.nav__links a');
+
+const scrollSpy = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navAnchors.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+sections.forEach(section => scrollSpy.observe(section));
