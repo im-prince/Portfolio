@@ -287,7 +287,23 @@ html:not([data-theme="light"]) #iconSun{ display: none; }
 /* ==========================================================================
    FOOTER
    ========================================================================== */
-.footer{
+ .footer{
   text-align: center; padding: 1.5rem var(--pad-inline); font-size: 0.8rem; color: var(--ink-dim);
   border-top: 1px solid var(--border);
+}
+
+.footer{ display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.footer__social{ display: flex; gap: 0.9rem; }
+.footer__icon{
+  width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: var(--card); border: 1px solid var(--border); color: var(--ink-dim);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+.footer__icon svg{ width: 18px; height: 18px; }
+.footer__icon:hover{ color: #fff; transform: translateY(-3px); border-color: transparent; }
+.footer__icon--github:hover{ background: #333333; }
+.footer__icon--linkedin:hover{ background: #0A66C2; }
+.footer__icon--twitter:hover{ background: #1DA1F2; }
+.footer__icon--instagram:hover{
+  background: linear-gradient(45deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
 }
