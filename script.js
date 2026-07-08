@@ -54,7 +54,7 @@ contactForm.addEventListener('submit', (e) => {
 
   const subject = encodeURIComponent(subjectInput.value || `Portfolio contact from ${nameInput.value}`);
   const body = encodeURIComponent(`${messageInput.value}\n\n— ${nameInput.value} (${emailInput.value})`);
-  window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
+  window.location.href = `princek801301@gmail.com?subject=${subject}&body=${body}`;
 });
 
 
